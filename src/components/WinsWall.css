@@ -1,0 +1,171 @@
+.wins-section {
+  background-color: var(--bg-primary);
+}
+
+.wins-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.wins-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 5rem;
+}
+
+.wins-heading {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+
+.wins-subheading {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Grid Layout */
+.wins-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Individual Card */
+.win-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 2rem;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-smooth);
+}
+
+.win-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(210, 115, 3, 0.3);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* User Profile Row */
+.win-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+.win-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.win-user-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.win-name-row {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.win-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.verified-icon {
+  width: 14px;
+  height: 14px;
+  color: var(--accent);
+}
+
+.win-handle {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* Metric Ribbon */
+.win-metric-badge {
+  position: relative;
+  align-self: flex-start;
+  background: rgba(210, 115, 3, 0.06);
+  border: 1px solid rgba(210, 115, 3, 0.15);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+}
+
+.metric-text {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--accent-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: relative;
+  z-index: 1;
+}
+
+.metric-glow {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(210, 115, 3, 0) 0%,
+    rgba(210, 115, 3, 0.15) 50%,
+    rgba(210, 115, 3, 0) 100%
+  );
+  animation: shine 3s infinite linear;
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  100% { left: 200%; }
+}
+
+/* Testimonial Text */
+.win-text {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-style: italic;
+  text-align: left;
+}
+
+/* Responsive grid */
+@media (max-width: 1024px) {
+  .wins-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .wins-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .wins-header {
+    margin-bottom: 3.5rem;
+  }
+  .wins-heading {
+    font-size: 1.85rem;
+  }
+}
