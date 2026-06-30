@@ -19,9 +19,9 @@ export default function Hero() {
     <section id="hero" className="hero-section">
       {/* Desktop Background Image (Absolute) */}
       <div className="hero-bg-desktop">
-        <img 
-          src="/images/hero_podcast_bg.png" 
-          alt="10x League Podcast Studio" 
+        <img
+          src={`${import.meta.env.BASE_URL}images/hero_podcast_bg.png`}
+          alt="10x League Podcast Studio"
           className="hero-bg-img"
         />
         <div className="hero-bg-overlay"></div>
@@ -46,9 +46,9 @@ export default function Hero() {
           {/* Mobile Image (Visible only on mobile inside flow) */}
           <div className="hero-image-mobile">
             <div className="mobile-img-card">
-              <img 
-                src="/images/hero_podcast_bg.png" 
-                alt="10x League Podcast Studio" 
+              <img
+                src={`${import.meta.env.BASE_URL}images/hero_podcast_bg.png`}
+                alt="10x League Podcast Studio"
                 className="mobile-inline-img"
               />
               <div className="mobile-img-overlay"></div>
@@ -57,7 +57,7 @@ export default function Hero() {
 
           <div className="hero-meta">
             <p className="hero-subtext">From great minds that inspire</p>
-            
+
             <div className="avatar-group">
               {guestAvatars.map((avatar) => (
                 <div key={avatar.id} className="avatar-ring" title={avatar.name}>
