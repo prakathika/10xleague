@@ -20,7 +20,7 @@ export default function Hero() {
       {/* Desktop Background Image (Absolute) */}
       <div className="hero-bg-desktop">
         <img
-          src={`${import.meta.env.BASE_URL}images/hero_podcast_bg.png`}
+          src="/images/hero_podcast_bg.png"
           alt="10x League Podcast Studio"
           className="hero-bg-img"
         />
@@ -47,7 +47,7 @@ export default function Hero() {
           <div className="hero-image-mobile">
             <div className="mobile-img-card">
               <img
-                src={`${import.meta.env.BASE_URL}images/hero_podcast_bg.png`}
+                src="/images/hero_podcast_bg.png"
                 alt="10x League Podcast Studio"
                 className="mobile-inline-img"
               />
